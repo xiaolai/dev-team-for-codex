@@ -2,8 +2,8 @@
 
 <!--
 Every dev-team agent reads this file before it starts. It is the only place the team learns how this repository
-works, so keep it factual: each value says where it came from. Written by $dev-team-init, reviewed by a person,
-committed with the repository. Re-run $dev-team-init to refresh it; it proposes edits and never overwrites.
+works, so keep it factual: each value says where it came from. Written by $dev-team:init, reviewed by a person,
+committed with the repository. Re-run $dev-team:init to refresh it; it proposes edits and never overwrites.
 -->
 
 ## Commands

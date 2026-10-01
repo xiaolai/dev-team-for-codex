@@ -13,10 +13,10 @@ codex plugin marketplace add xiaolai/dev-team-for-codex
 codex plugin add dev-team@xiaolai-dev-team
 ```
 
-In CLI, review and trust the plugin hook through `/hooks`. In desktop, enable the plugin and use its hook-review controls. Installation alone does not trust hooks. Open a fresh session in the repository you want the team to work on, then select the **dev-team-init** skill or ask:
+In CLI, review and trust the plugin hook through `/hooks`. In desktop, enable the plugin and use its hook-review controls. Installation alone does not trust hooks. Open a fresh session in the repository you want the team to work on, then select the **dev-team:init** skill or ask:
 
 ```text
-Use dev-team-init to set up this repository.
+Use dev-team:init to set up this repository.
 ```
 
 Initialization installs `.codex/agents/dev_team_*.toml` and drafts `.codex/dev-team.md`. Review its commands, protected paths, and release steps. Open another fresh session after agent installation so the runtime discovers the new roles. Do not assume Claude's `/dev-team:init` slash command exists in Codex; use the installed skill picker or the names above.
@@ -26,10 +26,10 @@ For every initialized repository, keep this plugin enabled. The generated agents
 ## Use
 
 ```text
-Use dev-team-run to add rate limiting to the API.
-Use dev-team-audit to review changes against main.
-Use dev-team-audit on the plan at dev-docs/feature-plan.md.
-Use dev-team-audit with process execution, base main.
+Use dev-team:run to add rate limiting to the API.
+Use dev-team:audit to review changes against main.
+Use dev-team:audit on the plan at dev-docs/feature-plan.md.
+Use dev-team:audit with process execution, base main.
 ```
 
 The main session orchestrates scout → planner → optional plan audit → tester → coder → auditor. Small tasks skip only the scout. Consultant questions go through their own fresh context. A plan gets one revision after a failed plan audit; invalid red runs get one correction; failed diff audits get at most two coder fix rounds. An engine error or failed implementation gate stops immediately.

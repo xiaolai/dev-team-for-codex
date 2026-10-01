@@ -1,5 +1,5 @@
 ---
-name: dev-team-run
+name: run
 description: Build a feature or fix with separate Codex planner, tester, coder, and auditor contexts, a repository profile, tests-first gates, and bounded correction rounds.
 ---
 
@@ -7,7 +7,7 @@ You orchestrate the team; delegate role work rather than impersonating roles in 
 
 ## Preconditions
 
-- Require `.codex/dev-team.md`; suggest dev-team-init if missing. Run `node "PACKAGE/scripts/doctor.mjs" --cwd "REPOSITORY"`. Require discovery of all seven `dev_team_*` agents in a fresh session. Do not fall back to generic agents when a configured role is unavailable.
+- Require `.codex/dev-team.md`; suggest dev-team:init if missing. Run `node "PACKAGE/scripts/doctor.mjs" --cwd "REPOSITORY"`. Require discovery of all seven `dev_team_*` agents in a fresh session. Do not fall back to generic agents when a configured role is unavailable.
 - Use the parent client's normal workspace-write permissions, not Full Access/bypass sandbox mode. Agent sandbox defaults do not override every live parent permission choice. Explain an unsupported mode and stop rather than changing it silently.
 - Run exactly `printf DEV_TEAM_GUARD_PROBE` once in the main session; require the hook denial naming main. Every role independently performs its configured probe. A missing/failed probe stops the run.
 - Check `git status --porcelain`. If dirty, explain that existing changes enter the audit and obtain consent; pass `--allow-dirty` only after that consent. Choose small only for one/two files with no interface or persisted-data change; otherwise standard. Read `Plan audit:` from the profile (auto if absent).

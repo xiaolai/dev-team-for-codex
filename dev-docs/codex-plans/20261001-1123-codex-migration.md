@@ -70,7 +70,7 @@ Preserve the existing section labels as an interface. Keep missing-profile behav
 ### Packaging and setup
 
 1. Put the Codex package at the new repository root, initially using the supported `.codex-plugin/plugin.json` compatibility format and explicit skills/hooks paths. This avoids accidentally loading the Claude skills or Claude hook. Reconsider a portable root manifest after the installed baseline passes a packaging probe.
-2. Package three skills: `dev-team-init`, `dev-team-run`, `dev-team-audit`. Record the actual installed names and invocation syntax from both clients; do not promise Claude slash-command aliases. Explicit skill selection and natural-language invocation must both reach the intended workflow.
+2. Package three skills: `init`, `run`, `audit` (qualified as `dev-team:init`, `dev-team:run`, `dev-team:audit`). Record the actual installed names and invocation syntax from both clients; do not promise Claude slash-command aliases. Explicit skill selection and natural-language invocation must both reach the intended workflow.
 3. Store reusable TOML templates in the package, then materialize `.codex/agents/dev_team_<role>.toml` in a target repository. Do not assume plugin-local `agents/` is automatically registered. Initialization uses a bootstrap explorer before custom roles exist; require a fresh session if discovery does not reload.
 4. Resolve helper paths relative to the loaded skill/package. Hook commands may use documented `PLUGIN_ROOT`; do not assume that environment substitution also occurs in agent instructions.
 5. Setup checks model availability, agent discovery, hook activation, sandbox behavior, and the CLI dependency. Missing prerequisites produce a precise setup failure, not a degraded team run.

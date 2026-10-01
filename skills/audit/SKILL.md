@@ -1,5 +1,5 @@
 ---
-name: dev-team-audit
+name: audit
 description: Independently audit a local change or plan with Codex, using a fresh native auditor or an explicitly selected read-only Codex process with pinned model and reasoning effort.
 ---
 

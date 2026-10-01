@@ -26,7 +26,7 @@ section, and if it does not, work from what the repository itself shows.
 
 ## Output format
 
-A request is either a task survey, the default, or a profile survey, when it says so (`$dev-team-init` sends one).
+A request is either a task survey, the default, or a profile survey, when it says so (`$dev-team:init` sends one).
 
 For a task survey, reply with exactly these sections:
 

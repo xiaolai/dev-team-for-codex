@@ -22,7 +22,7 @@ try {
     return { role, ...settings };
   });
   const profile = join(root, '.codex/dev-team.md');
-  if (!existsSync(profile)) throw new Error('Profile missing: run dev-team-init');
+  if (!existsSync(profile)) throw new Error('Profile missing: run dev-team:init');
   const text = readFileSync(profile, 'utf8');
   if (/\{\{[^}]+\}\}/.test(text)) throw new Error('Profile still contains template placeholders');
   for (const section of ['Commands', 'Conventions', 'Protected paths', 'Release', 'Auditor']) {
