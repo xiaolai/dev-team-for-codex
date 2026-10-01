@@ -1,0 +1,14 @@
+{
+  "name": "dev-team",
+  "version": "0.1.0",
+  "description": "Seven separate Codex roles with explicit models and reasoning effort, tests-first orchestration, independent audits, and a publishing guard.",
+  "author": { "name": "xiaolai" },
+  "license": "ISC",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "interface": {
+    "displayName": "Dev Team",
+    "shortDescription": "Plan, test, implement, audit, and release with separate agents",
+    "category": "Developer Tools"
+  }
+}

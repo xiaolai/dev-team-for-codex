@@ -1,0 +1,12 @@
+{
+  "name": "xiaolai-dev-team",
+  "interface": { "displayName": "Xiaolai Dev Team" },
+  "plugins": [
+    {
+      "name": "dev-team",
+      "source": { "source": "local", "path": "./" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Developer Tools"
+    }
+  ]
+}

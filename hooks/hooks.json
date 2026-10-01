@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${PLUGIN_ROOT}/scripts/push-guard.mjs\"",
+            "timeout": 10,
+            "statusMessage": "Checking dev-team role permissions"
+          }
+        ]
+      }
+    ]
+  }
+}
